@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.5.1"
+  version: "0.5.3"
 
 package:
   name: tree-sitter-markdown
@@ -11,7 +11,7 @@ source:
   # The PyPI sdist for 0.5.1 is missing the vendored tree_sitter/{parser,alloc,array}.h
   # headers, so build from the GitHub tag tarball instead.
   url: https://github.com/tree-sitter-grammars/tree-sitter-markdown/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: acaffe5a54b4890f1a082ad6b309b600b792e93fc6ee2903d022257d5b15e216
+  sha256: df845b1ab7c7c163ec57d7fa17170c92b04be199bddab02523636efec5224ab6
 
 build:
   number: 0
