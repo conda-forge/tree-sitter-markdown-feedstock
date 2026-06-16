@@ -5,3 +5,13 @@ github:
 conda_build:
   error_overlinking: true
 conda_forge_output_validation: true
+bot:
+  version_updates:
+    exclude:
+      # Upstream packaging regression: setup.py at v0.5.2+ expects flat
+      # src/parser.c at top level but the GitHub release tarball still has
+      # tree-sitter-markdown/src/parser.c + tree-sitter-markdown-inline/src/parser.c.
+      # Also no PyPI sdist for these versions. Unpin when upstream fixes
+      # the layout (or a v0.5.4+ ships clean).
+      - "0.5.2"
+      - "0.5.3"
