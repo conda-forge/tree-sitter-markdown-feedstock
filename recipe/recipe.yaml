@@ -21,7 +21,7 @@ source:
     - patches/0001-fix-setup-py-dual-grammar-paths.patch
 
 build:
-  number: 0
+  number: 1
   # abi3 packages build once at python_min and ship one artifact per platform.
   skip: is_abi3 and not is_python_min
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
